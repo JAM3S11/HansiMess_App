@@ -1,0 +1,89 @@
+# created by virtualenv automatically
+
+# Ignore all __pycache__ and compiled files
+__pycache__/
+*.py[cod]
+
+# Exclude specific folders, but ensure migration files are included
+# Ignore cache and bytecode, but allow actual migration files
+hansimes/migrations/__pycache__/
+hansimes/migrations/*.pyc
+
+# Virtual environment
+Lib/
+Scripts/
+pyvenv.cfg
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Django stuff
+db.sqlite3
+*.log
+
+# Static files
+static/
+
+# IDE-related files
+*.idea
+.vscode/
+*.swp
+.DS_Store
+
+# Pitch Deck files
+*.pdf
+*.pptx
+*.key
+
+# Flask stuff
+instance/
+.env
+
+# Flask-Security files
+.hash_dict
+
+# Flask-Mail files
+.mail_box
+
+# Flask-WTF files
+.webassets-cache
+
+# Flask-Login files
+.flask_session
+
+# Flask-Bcrypt files
+.flask_bcrypt
+
+# Flask-SQLAlchemy files
+migrations/
+
+# Flask-Migrate files
+migrations/
+
+# Flask-RESTful files
+.cache/
+
+# Flask-JWT-Extended files
+.jwt-secret-key
+
+# Flask-Caching files
+.flask_caching.cache
+
+# Flask-Limiter files
+limiter.cfg
+
+# Flask-Mail files
+.mail_box
+
+# Flask-SocketIO files
+socket.io
+
+# Flask-APScheduler files
+.flask_apscheduler.pid
+
+# Flask-RQ files
+.rq_dashboard/
+
+# Flask-Babel files
+translations/

@@ -1,0 +1,155 @@
+                        <!-- <!-- {{ form.non_field_errors }}
+                        {{ form.name.label_tag(attrs={"class": "contact_us_form_label"}) }}
+                        {{ form.name }}
+                        {{ form.email.label_tag(attrs={"class": "contact_us_form_label"}) }}
+                        {{ form.email }}
+                        {{ form.message.label_tag(attrs={"class": "contact_us_form_label"}) }}
+                        {{ form.message }} -->
+
+
+
+                        
+<!--  
+                        # User manager
+                        class UserManager(BaseUserManager):
+                            def create_user(self, Username, Email, Password=None):
+                                if not Email:
+                                    raise ValueError('Email is required')
+                                if not Username:
+                                    raise ValueError('Username is required')
+                                
+                                user = self.model(
+                                    Username=Username,
+                                    Email=self.normalize_email(Email)
+                                )
+                                user.set_password(Password)
+                                user.save(using=self._db)
+                                return user
+                            
+                            def create_superuser(self, Username, Email, Password):
+                                user = self.create_user(
+                                    Username=Username,
+                                    Email=Email,
+                                    Password=Password
+                                )
+                                user.is_admin = True
+                                user.save(using=self._db)
+                                return user 
+                         -->
+
+                         <!-- from django.contrib.auth.models import AbstractBaseUser, BaseUserManager 
+
+
+                         class User(AbstractBaseUser):
+                         is_active = models.BooleanField(default=True)
+                         is_admin = models.BooleanField(default=False)
+                         is_staff = models.BooleanField(default=False)
+                         is_superuser = models.BooleanField(default=False)
+                     
+                         USERNAME_FIELD = 'Username'
+                         REQUIRED_FIELDS = ['Email']
+                     
+                         objects = UserManager()
+
+                             
+    def has_perm(self, perm, obj=None):
+    return True
+
+def has_module_perms(self, app_label):
+    return True
+    
+
+
+    forms.py
+    from django.contrib.auth.forms import AuthenticationForm
+
+    class UserLoginForm(AuthenticationForm):
+     Username = forms.CharField(
+        max_length=150,
+        widget=forms.TextInput(attrs={
+            'class': 'contact_us_form_input',
+            'placeholder': 'Enter your username'
+        })
+    )
+     Password = forms.CharField(
+         label="Password",
+         widget=forms.PasswordInput(attrs={
+             'class': 'contact_us_form_input',
+             'placeholder': 'Enter your password'
+         })
+     )
+
+
+
+
+     # User model
+# class User(AbstractBaseUser):
+#     Username = models.CharField(max_length=100, unique=True)
+#     Email = models.EmailField(unique=True)
+#     Password = models.CharField(max_length=100)
+#     Created_at = models.DateTimeField(auto_now_add=True)
+
+#     is_active = models.BooleanField(default=True)
+#     is_admin = models.BooleanField(default=False)
+#     is_staff = models.BooleanField(default=False)
+#     is_superuser = models.BooleanField(default=False)
+
+#     USERNAME_FIELD = 'Username'
+#     REQUIRED_FIELDS = ['Email']
+
+#     objects = UserManager()
+
+#     def __str__(self):
+#         return f'User {self.Username}'
+    
+#     def has_perm(self, perm, obj=None):
+#         return True
+    
+#     def has_module_perms(self, app_label):
+#         return True
+
+
+# User manager
+# class UserManager(BaseUserManager):
+#     def create_user(self, Username, Email, Password=None):
+#         if not Email:
+#             raise ValueError('Email is required')
+#         if not Username:
+#             raise ValueError('Username is required')
+        
+#         user = self.model(
+#             Username=Username,
+#             Email=self.normalize_email(Email)
+#         )
+#         user.set_password(Password)
+#         user.save(using=self._db)
+#         return user
+    
+#     def create_superuser(self, Username, Email, Password):
+#         user = self.create_user(
+#             Username=Username,
+#             Email=Email,
+#             Password=Password
+#         )
+#         user.is_admin = True
+#         user.save(using=self._db)
+#         return user 
+
+# def contact_us(request):
+#     if request.method == 'POST':
+#         form = ContactMessForm(request.POST)
+#         if form.is_valid():
+#             contact_message = form.save()
+#             # send email to admin
+#             send_mail(
+#                 subject=f"New message from {contact_message.name}",
+#                 message=contact_message.message,
+#                 from_email=contact_message.email,
+#                 recipient_list=[settings.DEFAULT_FROM_EMAIL]
+#             )
+#             # messages.success(request, 
+#             #                  'Your message has been sent successfully. We will get back to you soon.')
+#             return redirect('homeScreen')
+#         else:
+#             form = ContactMessForm() -->
+            

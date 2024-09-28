@@ -1,0 +1,236 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hansimes Dashboard</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+    <!--===============FAVION===================-->
+    <link rel="shortcut icon" href="{% static 'images/favion.jpg' %}" type="image/x-icon">
+    <!---==========================ICONSCOUT UNICONS========================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!--==========GOOGLE FONTS===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body id="main_content">
+    <header id="header" class="header">
+        <div id="socials" class="socials">
+            <ul id="social" class="social">
+                <li id="description">How to reach us</li>
+                <li id="social_link list">
+                    <a href="https://instagram.com/" class="social_link_icon">
+                        <i class="ri-instagram-line"></i>
+                    </a>instagram
+                </li>
+                <li id="social_link list">
+                    <a href="https://twitter.com/" class="social_link_icon">
+                        <i class="ri-twitter-line"></i>
+                    </a>Twitter
+                </li>
+                <li id="social_link list">
+                    <a href="https://whatsapp.com/" class="social_link_icon">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>WhatsApp
+                </li>
+                <li id="social_link list">
+                    <a href="https://gmail.com/" class="social_link_icon">
+                        <i class="ri-mail-line"></i>
+                    </a>Gmail
+                </li>
+                <li id="social_link list">
+                    <a href="https://youtube.com/" class="social_link_icon">
+                        <i class="ri-youtube-line"></i>
+                    </a>YouTube
+                </li>
+            </ul>
+        </div>
+    </header>
+    <nav id="nav" class="nav_container container">
+         <a href="{% url 'homeScreen' %}" class="logo">HansiMes</a>
+
+         <!-- Navbar -->
+          <ul id="navbar" class="navbar">
+            <li class="nav_item">
+                <a href="{% url 'homeScreen' %}" class="nav_link">Home</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'aboutPage' %}" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'servicePage' %}" class="nav_link">Services</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'contactPage' %}" class="nav_link">Contact Us</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'loginPage' %}" class="nav_link">Login</a>
+            </li>
+          </ul>
+    </nav>
+    <main id="main" class="main">
+        <!-- HOME -->
+        <section id="home" class="home containers">
+            <img src="{% static 'images/homePage.jpg' %}" alt="Hansimes" class="img_responsive">
+
+            <div class="home_content home_container grid">
+                <div class="home_data">
+                    <h1 class="home_title">Welcome to Hansimes</h1>
+                    <p class="home_description">
+                        Place of good exposure and great experience for our customers.
+                    </p>
+
+                    <div class="home_form">
+                        <p class="home_form_description">Get in touch with us</p>
+                        <a href="{% url 'contactPage' %}" class="home_form_btn">Contact Us</a>
+                    </div>
+                </div>
+                <!-- <div class="port"></div> -->
+                <div class="home_info">
+                    <div class="home_info_title">
+                        <h3 class="home_info_title_text">Explore our services</h3>
+                    </div>
+                    <div class="home_info_text">
+                        <p class="home_info_text_description">We entail
+                            <a href="{% url 'servicePage' %}" class="home_info_text_link">learn more</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ABOUT -->
+        <section id="about" class="about containers">
+            <div class="about_content about_container grid grids">
+                <h2 class="about_title">Who is Hansimes?</h2>
+                <p class="about_description">        
+                    We are a team of dedicated professionals committed to providing 
+                    the highest quality healthcare services to our patients. 
+                    At Hansimes Online Management System, our focus is on ensuring 
+                    that our hospital operations run smoothly and efficiently, 
+                    allowing us to offer the best care possible. Whether it’s patient care, 
+                    appointment scheduling, or managing medical records, 
+                    we are always here to support our patients and address any concerns they may have.
+                    
+                    Our mission is to ensure that every interaction with our system 
+                    is seamless and enhances the patient experience and streamlines hospital management processes.</p>
+            </div>
+
+            <div class="about_details details_grid grids">
+                <!-- <img src="{% static 'images/about.jpg' %}" alt="About" class="img_about">  -->
+                <div class="about_details_content">
+                    <h3 class="about_details_title">Our Mission</h3>
+                    <p class="about_details_description">
+                        To deliver high-quality healthcare services through efficient hospital management, 
+                        ensuring patient satisfaction, and improving overall healthcare outcomes.
+                    </p>
+            </div>
+            <div class="about_arrows"></div>
+        </section>
+        <!-- SERVICES -->
+        <section id="services" class="services containers">
+            <h2 class="services_title">Our Services</h2>
+            <div class="services_content services_container grid">
+                <div class="services_card">
+                    <img src="{% static 'images/patientManagement.jpg' %}" alt="Services" class="service_card_img">
+                    <h3 class="services_card_title">Patient Management</h3>
+                    <p class="services_card_description">
+                        We provide an efficient platform for managing patient records, 
+                        including demographics, appointments, and medical histories to ensure seamless care delivery.
+                    </p>
+                </div>
+                <div class="services_card">
+                    <img src="{% static 'images/docStaff.jpg' %}" alt="Services" class="service_card_img">
+                    <h3 class="services_card_title">Doctor and Staff Collaboration</h3>
+                    <p class="services_card_description">
+                        Our system enables doctors, nurses, and hospital staff to
+                         collaborate efficiently, ensuring coordinated and timely patient care.
+                    </p>
+                </div>
+                <div class="services_card">
+                    <img src="{% static 'images/hsResource.jpg' %}" alt="Services" class="service_card_img">
+                    <h3 class="services_card_title">Hospital Resource Management</h3>
+                    <p class="services_card_description">
+                        We offer tools to manage hospital resources such as bed allocation, 
+                        medical supplies, and equipment, optimizing operational efficiency.
+            </p>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT US -->
+        <section id="contact_us" class="contact_us containers">
+            <!-- <img src="{% static 'images/soft_event.jpg' %}" alt="Contact Us" class="img_responsive"> -->
+            <div class="contact_us_content contact_us_container grid">
+                <form action="{% url 'contact_us' %}" method="POST" class="contact_us_form">
+                    {% csrf_token %} 
+                    <h2 class="contact_us_title">Contact Us</h2>
+                    <div class="contact_us_form_group">
+                        <!-- Render form -->
+                        <label for="name" class="contact_us_form_label">
+                            {{ form.Name.label_tag }}
+                        </label>
+                        {{ form.Name }}
+                        <!-- <input type="text" id="name" name="name" class="contact_us_form_input" placeholder="Enter your name"> -->
+                        <label for="email" class="contact_us_form_label">
+                            {{ form.Email.label_tag }}
+                        </label>
+                        {{ form.Email }}
+                        <!-- <input type="email" name="email" name="email" class="contact_us_form_input" placeholder="Enter your email"> -->
+                        <label for="message" class="contact_us_form_label">
+                            {{ form.Message.label_tag }}
+                        </label>
+                        {{ form.Message }}
+                        <!-- <textarea name="message" id="message" class="contact_us_form_input" 
+                            rows="5" cols="60" placeholder="Enter your message"></textarea> -->
+                        <button type="submit" class="contact_us_form_btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer" class="footer hfooter_body">
+        <div class="footer_content footer_container">
+            <div class="footer_links homefooter_links">
+                <div class="footer_links_socials">
+                    <p class="footer_description">Hansimes</p>
+                    <a href="https://instagram.com/" class="footer_social_links">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://whatsapp.com/" class="footer_social_links">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+                    <a href="https://gmail.com/" class="footer_social_links">
+                        <i class="ri-mail-line"></i>
+                    </a>
+                    <a href="https://youtube.com/" class="footer_social_links">
+                        <i class="ri-youtube-line"></i>
+                    </a>
+                    <a href="https://gitbub.com/" class="footer_social_links">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </div>
+                <div class="footer_links_menu homefooter">
+                    <ul class="footer_links_list">
+                        <li class="footer_links_item"><a href="{% url 'homeScreen' %}" class="footer_links_nav">Home</a></li>
+                        <li class="footer_links_item"><a href="{% url 'aboutPage' %}" class="footer_links_nav">About</a></li>
+                        <li class="footer_links_item"><a href="{% url 'servicePage' %}" class="footer_links_nav">Services</a></li>
+                        <li class="footer_links_item"><a href="{% url 'contactPage' %}" class="footer_links_nav">Contact Us</a></li>
+                        <li class="footer_links_item"><a href="{% url 'loginPage' %}" class="footer_links_nav">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links_rights">
+                    <p class="footer_links_rights_text">&copy; 2024 Hansimes. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

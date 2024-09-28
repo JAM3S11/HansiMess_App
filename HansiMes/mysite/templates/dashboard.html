@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hansimes Dashboard</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}" >
+    <!--===============FAVION===================-->
+    <link rel="shortcut icon" href="{% static 'images/favion.jpg' %}" type="image/x-icon">
+    <!---==========================ICONSCOUT UNICONS========================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!--==========GOOGLE FONTS===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body id="dashboardExp">
+    <div class="container">
+        <nav class="sidebar">
+            <div class="profile" id="profile">
+                <img src="{% static 'images/expenseLogo.png' %}" alt="{{ request.user.username }}">
+                <h2 id="username">{{ request.user.username }}</h2>
+            </div>
+            <ul id="menu">
+                <li id="item"><a href="{% url 'dashboardPage' %}" class="active"><i class="icon-home"></i> Home</a></li>
+                <li id="item"><a href="#"><i class="icon-file"></i> File</a></li>
+                <li id="item"><a href="#"><i class="icon-message"></i> Messages</a></li>
+                <li id="item"><a href="#"><i class="icon-notification"></i> Notification</a></li>
+                <li id="item"><a href="#"><i class="icon-settings"></i> Settings</a></li>
+                <li id="item"><a href="#"><i class="icon-graph"></i> Graph</a></li>
+                <li id="item"><a href="{% url 'logoutPage' %}">Logout</a></li>
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <h1>HansiMes Dashboard</h1>
+                <div class="user-menu">
+                    <span class="username" id="username">{{ request.user.username }}</span>
+                    <img src="{% static 'images/expenseLogo.png' %}" alt="{{ request.user.username }}" class="avatar">
+                </div>
+            </header>
+            <div class="dashboard-grid" id="grid">
+                <div class="card amount">
+                    <h3 id="amount"><a href="#" onclick="">Amount</a></h3>
+                    <p class="big-number">$ 628</p>
+                </div>
+                <div class="card description">
+                    <h3 id="description"><a href="#" onclick="">Disease</a></h3>
+                    <p class="big-number">2434</p>
+                </div>
+                <div class="card category">
+                    <h3 id="category"><a href="#" onclick="">Gender</a></h3>
+                    <p class="big-number">1259</p>
+                </div>
+                <div class="card date">
+                    <h3 id="date"><a href="#" onclick="">Date</a></h3>
+                    <p class="big-number">8,5</p>
+                </div>
+                <div class="expenseDashboard" id="expenseDashboard">
+                    <h2 id="addTransactionBtn" class="addTransactionBtn">
+                        <a href="addTransaction" onclick="">Add New Appointment</a>
+                    </h2>
+                </div>
+            </div>
+            <table id="transactionList" class="transactionList">
+                <thead id="transactionTableHead">
+                    <tr>
+                        <th>Appointment ID</th>
+                        <th>Patient ID</th>
+                        <th>Age</th>
+                        <th>Disease</th>
+                        <th>Gender</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionTableBody">
+                    <!-- <tr>
+                        <td>01</td>
+                        <td>12</td>
+                        <td>23.90</td>
+                        <td>Cabbage</td>
+                        <td>Vegetables</td>
+                        <td>9239</td>
+                        <td>
+                            <button>Edit</button>
+                            <button>Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <!-- <script src="dashboard.js"></script> -->
+</body>
+</html>

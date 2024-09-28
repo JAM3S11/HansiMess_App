@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Hansimes</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" >
+    <!--===============FAVION===================-->
+    <link rel="shortcut icon" href="{% static 'images/favion.jpg' %}" type="image/x-icon">
+    <!---==========================ICONSCOUT UNICONS========================-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!--==========GOOGLE FONTS===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--=============== REMIXICONS ===============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body id="main_content">
+    <nav id="nav" class="nav_container container">
+         <a href="{% url 'homeScreen' %}" class="logo">HansiMes</a>
+
+         <!-- Navbar -->
+          <ul id="navbar" class="navbar">
+            <li class="nav_item">
+                <a href="{% url 'homeScreen' %}" class="nav_link">Home</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'aboutPage' %}" class="nav_link">About</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'servicePage' %}" class="nav_link">Services</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'contactPage' %}" class="nav_link">Contact Us</a>
+            </li>
+            <li class="nav_item">
+                <a href="{% url 'loginPage' %}" class="nav_link">Login</a>
+            </li>
+          </ul>
+    </nav>
+    <!--MAIN CONTENT-->
+    <main id="main" class="main col-gap 0.3rem">
+        <!--ABOUT SECTION-->
+        <section id="aboutPage" class="aboutPage containers">
+            <!--Lets grow together-->
+            <div class="about_lets">
+                <div class="about_lets_left">
+                    <h4 class="about_lets_subtitle">Hansimes Culture</h4>
+                    <h3 class="about_lets_title">Let’s grow together</h3>
+                    <p class="about_lets_text">Amazing companies start with amazing people. 
+                        Exceptional healthcare starts with a team of dedicated professionals. 
+                        At Hansimes, we are creating a diverse team of compassionate, skilled individuals 
+                        motivated by a shared goal—enhancing lives by improving healthcare services 
+                        through innovation and efficient hospital management.</p>
+                </div>
+                <div class="about_lets_right">
+                    <img src="{% static 'images/team1.jpg' %}" alt="team1" class="team1_img">
+                </div>
+            </div>
+        </section>
+        <section id="aboutImage" class="aboutImage containers">
+            <!--Image of Vision-->
+            <div class="about_vision">
+                <img src="{% static 'images/team5.jpg' %}" alt="team2" class="team2_img">
+            </div>
+        </section>
+        <section id="about_Us" class="about_Us containers">
+            <!--AboutUs of Vision-->
+            <div class="aboutUs">
+                <h4 class="aboutUs_subtitle">Who is Hansimes</h4>
+                <h3 class="aboutUs_title">To be a leading healthcare management solution provider</h3>
+                <p class="aboutUs_text"> We are a group of dedicated professionals committed to 
+                    delivering high-quality healthcare management services. Our focus is on improving 
+                    the quality of patient care and hospital operations through our innovative Hansimes platform.</p>
+                <p class="aboutUs_text">Our team is passionate about technology and healthcare, 
+                    and we are always driven to provide efficient solutions for managing patient records, 
+                    staff collaboration, and hospital resources.</p>
+                <p class="aboutUs_text">At Hansimes, we are always ready to support hospitals and 
+                    healthcare facilities by streamlining their operations and enhancing patient 
+                    experiences with our reliable and user-friendly system.</p>
+                <div class="aboutUs_img">
+                    <img src="{% static 'images/about_1.jpg' %}" alt="team3" class="team3_img">
+                    <img src="{% static 'images/about_2.jpg' %}" alt="team4" class="team4_img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer id="footer" class="footer">
+        <div class="footer_content footer_container">
+            <div class="footer_links">
+                <div class="footer_links_socials">
+                    <p class="footer_description">Hansimes</p>
+                    <a href="https://instagram.com/" class="footer_social_links">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://whatsapp.com/" class="footer_social_links">
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+                    <a href="https://gmail.com/" class="footer_social_links">
+                        <i class="ri-mail-line"></i>
+                    </a>
+                    <a href="https://youtube.com/" class="footer_social_links">
+                        <i class="ri-youtube-line"></i>
+                    </a>
+                    <a href="https://gitbub.com/" class="footer_social_links">
+                        <i class="ri-github-line"></i>
+                    </a>
+                </div>
+                <div class="footer_links_menu">
+                    <ul class="footer_links_list">
+                        <li class="footer_links_item"><a href="{% url 'homeScreen' %}" class="footer_links_nav">Home</a></li>
+                        <li class="footer_links_item"><a href="{% url 'aboutPage' %}" class="footer_links_nav">About</a></li>
+                        <li class="footer_links_item"><a href="{% url 'servicePage' %}" class="footer_links_nav">Services</a></li>
+                        <li class="footer_links_item"><a href="{% url 'contactPage' %}" class="footer_links_nav">Contact Us</a></li>
+                        <li class="footer_links_item"><a href="{% url 'loginPage' %}" class="footer_links_nav">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links_rights">
+                    <p class="footer_links_rights_text">&copy; 2024 Hansimes. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
